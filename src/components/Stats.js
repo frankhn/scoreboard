@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Stats = (props) => {
-    const totalPlayers =props.players.length;
-    const totalPoints = props.players.reduce( (total, player) => {
+ class Stats extends Component {
+     render(){
+         const { players } = this.props;
+    const totalPlayers =players.length;
+    const totalPoints = players.reduce( (total, player) => {
        return total + player.score
     }, 0)
     return (
@@ -19,6 +21,7 @@ const Stats = (props) => {
         </tbody>
         </table>
     );
+     }
 }
 
 export default Stats;
