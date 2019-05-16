@@ -1,21 +1,31 @@
-import React from 'react';
-import protoTypes from 'prop-types';
+import PropTypes from "prop-types";
+import React from "react";
 
-const Counter = ({ index, score, changerScore}) => {
-    return (
-      <div className="counter">
-        <button className="counter-action decrement" onClick={() => changerScore(index, -1)}> - </button>
-        <span className="counter-score">{ score }</span>
-        <button className="counter-action increment" onClick={() => changerScore(index, 1)}> + </button>
-      </div>
-    );
-}
-Counter.protoTypes = {
-  index: protoTypes.number,
-  score: protoTypes.number,
-  changerScore: protoTypes.func
-}
+const Counter = ({ index, score, changerScore }) => {
+  return (
+    <div className="counter">
+      <button
+        id="decrement"
+        className="counter-action decrement"
+        onClick={() => changerScore(index, -1)}
+      >
+        -
+      </button>
+      <span className="counter-score">{score}</span>
+      <button
+        className="counter-action increment"
+        onClick={() => changerScore(index, 1)}
+      >
+        +
+      </button>
+    </div>
+  );
+};
 
+Counter.propTypes = {
+  index: PropTypes.number,
+  score: PropTypes.number,
+  changerScore: PropTypes.func
+};
 
-  
-  export default Counter;
+export default Counter;

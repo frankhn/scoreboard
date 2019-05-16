@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render counter should render counter component to match the snapshot 1`] = `
+<div
+  className="counter"
+>
+  <button
+    className="counter-action decrement"
+    id="decrement"
+    onClick={[Function]}
+  >
+    -
+  </button>
+  <span
+    className="counter-score"
+  >
+    2
+  </span>
+  <button
+    className="counter-action increment"
+    onClick={[Function]}
+  >
+    +
+  </button>
+</div>
+`;
